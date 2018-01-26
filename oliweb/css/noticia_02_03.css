@@ -1,0 +1,30 @@
+section {
+    width: 90%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+#contenido img {
+    margin-right: 5%;
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width:49.06em) {
+    #contenido img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width:34.38em) {
+    section p:last-child {
+        float: left;
+    }
+    #contenido img {
+        width: 80%;
+        height: 80%;
+    }
+}

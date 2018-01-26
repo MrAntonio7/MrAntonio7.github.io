@@ -1,0 +1,70 @@
+section {
+    margin-left: 7%;
+    width: 40%;
+    float: left;
+}
+
+#contenido img {
+    float: right;
+    margin-right: 7%;
+    margin-top: 5%;
+}
+
+footer {
+    margin-top: 5%;
+}
+
+table {
+    float: left;
+    padding-top: 5%;
+    margin-left: 30%;
+}
+
+th {
+    background: #00701a;
+    color: #fff;
+}
+
+table * {
+    padding: 2%;
+    border: 0.2px solid #ededed;
+}
+
+@media screen and (max-width:49.06em) {
+    section p:last-child {
+        width: 200%;
+    }
+    #contenido img {
+        margin-top: 20%;
+        width: 40%;
+        height: 40%;
+    }
+    section {
+        width: 35%;
+    }
+    table {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}
+
+@media screen and (max-width:34.38em) {
+    section {
+        width: 90%;
+    }
+    section p:last-child {
+        width: 90%;
+    }
+    #contenido img {
+        float: left;
+        margin-top: 3%;
+        margin-left: 7%;
+        width: 80%;
+        height: 80%;
+    }
+    table {
+        font-size: 0.7em;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+}

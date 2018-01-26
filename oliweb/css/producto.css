@@ -1,0 +1,35 @@
+#imagen {
+    float: left;
+    margin-left: 20%;
+    border: 1px solid #ededed;
+}
+
+#descripcion {
+    float: left;
+    margin-left: 10%;
+}
+
+#descripcion input {
+    margin-bottom: 5%;
+}
+
+footer {
+    margin-top: 3%;
+}
+
+@media (max-width:49.06em) {
+    #descripcion {
+        margin-left: 20%;
+        margin-right: 0 auto;
+    }
+}
+
+@media (max-width:34.38em) {
+    #imagen img {
+        width: 100%;
+        height: 100%;
+    }
+    #descripcion input {
+        width: 60%;
+    }
+}

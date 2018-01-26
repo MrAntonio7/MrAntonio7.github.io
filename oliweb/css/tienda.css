@@ -1,0 +1,66 @@
+#filtro {
+    margin-left: 3%;
+    float: left;
+    width: 20%;
+}
+
+#filtro button {
+    border-bottom: 1px solid #ededed;
+    margin: 0;
+    width: 100%;
+}
+
+#filtro h2 {
+    text-align: center;
+}
+
+#catalogo {
+    width: 70%;
+    margin-left: 2%;
+    float: left;
+}
+
+.producto {
+    float: left;
+    width: 33%;
+}
+
+.producto img {
+    border: 1px solid #ededed;
+}
+
+footer {
+    margin-top: 5%;
+}
+
+@media (max-width:49.1em) {
+    .producto {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (max-width:34.38em) {
+    #filtro button {
+        float: left;
+        margin: 0;
+        width: 100%;
+    }
+    #filtro {
+        border: none;
+        margin-left: 5%;
+        margin-right: 0 auto;
+        width: 90%;
+    }
+    .producto {
+        padding-left: 20%;
+        float: left;
+        width: 100%;
+    }
+    .producto img {
+        width: 100%;
+    }
+    #catalogo {
+        margin-top: 2%;
+    }
+}

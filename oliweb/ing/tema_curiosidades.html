@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script>
+        var vista = true;
+
+        function menu() {
+
+            if (vista) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            } else {
+                document.getElementsByTagName('nav')[0].style.display = "none";
+                vista = true;
+            }
+
+        }
+
+        function pantalla() {
+            if (window.innerWidth > 550) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            }
+            //  else {
+            //     document.getElementsByTagName('nav')[0].style.display = "none";
+            //     vista = true;
+            // }
+        }
+
+        window.onload = function() {
+            setInterval('pantalla()', 100);
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+    <link rel="stylesheet" type="text/css" href="../css/tema.css">
+    <link rel="Shortcut Icon" href="../imagenes/icono_pest.ico" type="image/x-icon" />
+    <title>OLIWEB</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <header>
+            <div id="menu_cabecera">
+                <div id="logo">
+                    <a href="index.html"><img src="../imagenes/logo.png" alt="OLIWEB"></a>
+                </div>
+                <a id="menu" title="Menu" onclick="menu()"><img src="../imagenes/iconos/menu.png" alt="Desplegar"></a>
+                <nav>
+                    <ul>
+                        <li id="tienda"><a class="negrita" href="tienda.html">Store</a></li>
+                        <li id="documentos"><a class="negrita" href="documentos.html">Documents</a></li>
+                        <li id="contacto"><a class="negrita" href="contacto.html">Contact</a></li>
+                        <li id="informacion"><a class="negrita" href="informacion.html">Information</a></li>
+                        <li><input type="text" id="buscar" value="Search.."><input id="submit_buscar" type="image" name="submit" src="../imagenes/iconos/buscar.png" alt="Buscar"></li>
+                        <li><a class="negrita" id="entrar" href="entrar.html">Enter</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <img id="portada" src="../imagenes/portada/portada_noticias.jpg" alt="Portada">
+    </div>
+    <div id="contenido">
+        <h1>Of the olive oil you should know that ...</h1>
+        <p> <span class="negrita">1. The quality of the oil starts in the field and depends on the state of the olive</span> and the conditions of extraction. If the olives are healthy they are pressed the same day of the harvest and they are transferred
+            to suitable storage tanks, where extra virgin olive oil will be obtained or what is the same, pure juice of olives without another aroma or flavor that can distort the sensory qualities of the olives. </p>
+        <p><span class="negrita">2. To oils obtained exclusively by mechanical procedures</span> either by pressure or centrifugation, and without the intervention of any chemical process, they are called virgins.</p>
+        <p><span class="negrita">3. When the olives are damaged or there are problems in the production process, we will obtain ordinary virgin oils or lampantes,</span> that must necessarily be refined because they are not suitable for consumption. In this
+            process, the unwanted components are eliminated, leaving the oil with almost no taste, smell and color. Once refined, ordinary virgin olive oil is called refined olive oil. To this oil a certain amount of virgin olive oil is added and what
+            we obtain is what is called olive oil.</p>
+        <p><span class="negrita">4. The best olive oils are first detected by their aroma.</span> It must have a fruity, intense, fresh smell. The aroma of the olive is at the bottom of the palate, as in a good wine.</p>
+        <p><span class="negrita">5. A good olive oil should be light, slightly "oily", slightly spicy</span> and sometimes slightly bitter, depending on the variety of olives used.</p>
+        <p><span class="negrita">6. The newer, the better.</span> The aging process of an olive oil begins when it is obtained, and with it its flavor, texture, smell and even its nutritional qualities are gradually lost.</p>
+        <p><span class="negrita">7. Oils are bottled in opaque glass</span> to delay the natural oxidation process that generates light. It should be kept somewhere cool and at a temperature between 15 and 20 degrees.</p>
+        <p><span class="negrita">8. The oil color range goes from yellow to apple green.</span> </p>
+        <p><span class="negrita">9. It is believed that virgin oils should only be used raw.</span> However, because of their origin and processing they can always be used for frying and cooking, they are degraded much less with heat and their flavors and
+            aromas improve the final result. From a starry egg to a good white rice.</p>
+        <p><span class="negrita">10. Unlike others, olive oil is easily digested.</span></p>
+    </div>
+    <div class="clearfix"></div>
+    <footer>
+        <div id="social">
+            <h2>Social</h2>
+            <div id="redes">
+                <a title="Twitter" href="https://www.twitter.com/"><img class="icono" src="../imagenes/iconos/twitter.png" alt="Twitter"></a>
+                <a title="Facebook" href="https://www.facebook.com/"><img class="icono" src="../imagenes/iconos/facebook.png" alt="Facebook"></a>
+                <a title="Instagram" href="https://www.instagram.com/"><img class="icono" src="../imagenes/iconos/instagram.png" alt="Instagram"></a>
+                <a title="Email" href="https://www.google.com/gmail/"><img class="icono" src="../imagenes/iconos/rss.png" alt="Email"></a>
+                <a title="Google +" href="https://plus.google.com/about?hl=es"><img class="icono" src="../imagenes/iconos/googleplus.png" alt="Google"></a>
+                <a title="Linkedin" href="https://es.linkedin.com/"><img class="icono" src="../imagenes/iconos/linkedin.png" alt="Linkedin"></a>
+            </div>
+        </div>
+        <div id="traducir">
+            <h2>Translate</h2>
+            <form class="form">
+                <div class="switch-field">
+                    <input onclick="window.location='../esp/tema_curiosidades.html'" type="radio" id="switch_left" name="switch_2" value="yes" />
+                    <label for="switch_left">Spanish</label>
+                    <input onclick="window.location='tema_curiosidades.html'" type="radio" id="switch_right" name="switch_2" value="no" checked/>
+                    <label for="switch_right">English</label>
+                </div>
+            </form>
+        </div>
+        <div id="nosotros">
+            <h2>Store information</h2>
+            <ul>
+                <li id="dir">
+                    <a href="informacion.html"><img class="icono" src="../imagenes/iconos/localizacion.png" alt="Direccion"></a>
+                    <span>C/Granada, Nº1, 23001, Jaén</span>
+                </li>
+                <br>
+                <li id="numero">
+                    <a href="tel:#"><img class="icono" src="../imagenes/iconos/telefono.png" alt="Telefono"></a>
+                    <span>Call us 666 666 666</span>
+
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

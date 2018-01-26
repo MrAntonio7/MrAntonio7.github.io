@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script>
+        var vista = true;
+
+        function menu() {
+
+            if (vista) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            } else {
+                document.getElementsByTagName('nav')[0].style.display = "none";
+                vista = true;
+            }
+
+        }
+
+        function pantalla() {
+            if (window.innerWidth > 550) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            }
+            //  else {
+            //     document.getElementsByTagName('nav')[0].style.display = "none";
+            //     vista = true;
+            // }
+        }
+
+        window.onload = function() {
+            setInterval('pantalla()', 100);
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+    <link rel="stylesheet" type="text/css" href="../css/noticia_02_03.css">
+    <link rel="Shortcut Icon" href="../imagenes/icono_pest.ico" type="image/x-icon" />
+    <title>OLIWEB</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <header>
+            <div id="menu_cabecera">
+                <div id="logo">
+                    <a href="index.html"><img src="../imagenes/logo.png" alt="OLIWEB"></a>
+                </div>
+                <a id="menu" title="Menu" onclick="menu()"><img src="../imagenes/iconos/menu.png" alt="Desplegar"></a>
+                <nav>
+                    <ul>
+                        <li id="tienda"><a class="negrita" href="tienda.html">Store</a></li>
+                        <li id="documentos"><a class="negrita" href="documentos.html">Documents</a></li>
+                        <li id="contacto"><a class="negrita" href="contacto.html">Contact</a></li>
+                        <li id="informacion"><a class="negrita" href="informacion.html">Information</a></li>
+                        <li><input type="text" id="buscar" value="Search.."><input id="submit_buscar" type="image" name="submit" src="../imagenes/iconos/buscar.png" alt="Buscar"></li>
+                        <li><a class="negrita" id="entrar" href="entrar.html">Enter</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <img id="portada" src="../imagenes/portada/portada_noticias.jpg" alt="Portada">
+    </div>
+    <div id="contenido">
+
+        <section>
+            <h1>
+                Extra virgin olive oil helps prevent Alzheimer's
+            </h1>
+            <h3>
+                A study showed that extra virgin olive oil could be useful for the prevention and treatment of Alzheimer's
+            </h3>
+            <p>About a decade ago, American researchers who were participating in a scientific congress in Sicily, tested freshly pressed olive oil for the first time. The experience for one of them, was not very positive, as he experienced an itching in
+                the throat that reminded him of what he felt when he was taking an ibuprofen to relieve his headaches. This, called his attention, prompting him to investigate the different substances that made up the olive oil and identify the one that
+                produced that "itch". He achieved his goal, isolated the substance he named oleocanthal (oil = oil, cant = sting, al = aldehyde).</p>
+            <img src="../imagenes/noticias/noticia_03.jpg" alt="Cariño">
+            <p>He continued his research on the effects that this substance had on the brain, reaching the conclusion that it was capable of increasing the production of two proteins and key enzymes in the elimination of beta-amyloid from the brain.</p>
+        </section>
+
+    </div>
+    <div class="clearfix"></div>
+    <footer>
+        <div id="social">
+            <h2>Social</h2>
+            <div id="redes">
+                <a title="Twitter" href="https://www.twitter.com/"><img class="icono" src="../imagenes/iconos/twitter.png" alt="Twitter"></a>
+                <a title="Facebook" href="https://www.facebook.com/"><img class="icono" src="../imagenes/iconos/facebook.png" alt="Facebook"></a>
+                <a title="Instagram" href="https://www.instagram.com/"><img class="icono" src="../imagenes/iconos/instagram.png" alt="Instagram"></a>
+                <a title="Email" href="https://www.google.com/gmail/"><img class="icono" src="../imagenes/iconos/rss.png" alt="Email"></a>
+                <a title="Google +" href="https://plus.google.com/about?hl=es"><img class="icono" src="../imagenes/iconos/googleplus.png" alt="Google"></a>
+                <a title="Linkedin" href="https://es.linkedin.com/"><img class="icono" src="../imagenes/iconos/linkedin.png" alt="Linkedin"></a>
+            </div>
+        </div>
+        <div id="traducir">
+            <h2>Translate</h2>
+            <form class="form">
+                <div class="switch-field">
+                    <input onclick="window.location='../esp/noticia_03.html'" type="radio" id="switch_left" name="switch_2" value="yes" />
+                    <label for="switch_left">Spanish</label>
+                    <input onclick="window.location='noticia_03.html'" type="radio" id="switch_right" name="switch_2" value="no" checked />
+                    <label for="switch_right">English</label>
+                </div>
+            </form>
+        </div>
+        <div id="nosotros">
+            <h2>Store Information</h2>
+            <ul>
+                <li id="dir">
+                    <a href="informacion.html"><img class="icono" src="../imagenes/iconos/localizacion.png" alt="Direccion"></a>
+                    <span>C/Granada, Nº1, 23001, Jaén</span>
+                </li>
+                <br>
+                <li id="numero">
+                    <a href="tel:#"><img class="icono" src="../imagenes/iconos/telefono.png" alt="Telefono"></a>
+                    <span>Call us 666 666 666</span>
+
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

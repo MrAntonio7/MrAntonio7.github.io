@@ -1,0 +1,21 @@
+li {
+    color: #43a047;
+    margin-top: 1%;
+}
+
+a {
+    color: #43a047;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#contenido>ul {
+    margin-left: 10%;
+}
+
+footer {
+    margin-top: 3%;
+}

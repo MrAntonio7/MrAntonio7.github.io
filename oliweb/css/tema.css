@@ -1,0 +1,40 @@
+.video {
+    position: relative;
+    padding-bottom: 50%;
+    /* 16/9 ratio */
+    padding-top: 30px;
+    /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+}
+
+#contenido {
+    margin-left: 7%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#contenido h1 {
+    margin-bottom: 2%;
+}
+
+#contenido img {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 75%;
+    height: 75%;
+}
+
+#contenido div {
+    margin-left: 10%;
+}

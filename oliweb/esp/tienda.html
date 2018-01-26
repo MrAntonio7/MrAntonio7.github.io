@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script>
+        var vista = true;
+
+        function menu() {
+
+            if (vista) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            } else {
+                document.getElementsByTagName('nav')[0].style.display = "none";
+                vista = true;
+            }
+
+        }
+
+        function pantalla() {
+            if (window.innerWidth > 550) {
+                document.getElementsByTagName('nav')[0].style.display = "initial";
+                vista = false;
+            }
+            //  else {
+            //     document.getElementsByTagName('nav')[0].style.display = "none";
+            //     vista = true;
+            // }
+        }
+
+        window.onload = function() {
+            setInterval('pantalla()', 100);
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+    <link rel="stylesheet" type="text/css" href="../css/tienda.css">
+    <link rel="Shortcut Icon" href="../imagenes/icono_pest.ico" type="image/x-icon" />
+    <title>OLIWEB</title>
+</head>
+
+<body>
+    <div id="cabecera">
+        <header>
+            <div id="menu_cabecera">
+                <div id="logo">
+                    <a href="../index.html"><img src="../imagenes/logo.png" alt="OLIWEB"></a>
+                </div>
+                <a id="menu" title="Menu" onclick="menu()"><img src="../imagenes/iconos/menu.png" alt="Desplegar"></a>
+                <nav>
+                    <ul>
+                        <li id="tienda"><a class="negrita" href="tienda.html">Tienda</a></li>
+                        <li id="documentos"><a class="negrita" href="documentos.html">Documentos</a></li>
+                        <li id="contacto"><a class="negrita" href="contacto.html">Contacto</a></li>
+                        <li id="informacion"><a class="negrita" href="informacion.html">Información</a></li>
+                        <li><input type="text" id="buscar" value="Buscar..."><input id="submit_buscar" type="image" name="submit" src="../imagenes/iconos/buscar.png" alt="Buscar"></li>
+                        <li><a class="negrita" id="entrar" href="entrar.html">Entrar</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <img id="portada" src="../imagenes/portada/portada_tienda.jpg" alt="Portada">
+    </div>
+    <div id="contenido">
+        <aside id="filtro">
+            <h2>Filtro</h2>
+            <p><button class="button" onclick="todo()">Todo</button></p>
+            <p><button class="button" onclick="garrafa()">Garrafas</button></p>
+            <p><button class="button" onclick="botella()">Botellas</button></p>
+            <p><button class="button" onclick="lata()">Latas</button></p>
+
+        </aside>
+        <div id="catalogo">
+            <div class="producto botella">
+                <a href="productos/producto_01.html"><img src="../imagenes/productos/botella_1.jpg" alt="Botella 1L"></a>
+            </div>
+            <div class="producto botella">
+                <a href="productos/producto_02.html"><img src="../imagenes/productos/botella_1,5.jpg" alt="Botella 1.5L"></a>
+            </div>
+            <div class="producto garrafa">
+                <a href="productos/producto_03.html"><img src="../imagenes/productos/garrafa_5.jpg" alt="Garrafa 5L"></a>
+            </div>
+            <div class="producto garrafa">
+                <a href="productos/producto_04.html"><img src="../imagenes/productos/garrafa_8.jpg" alt="Garrafa 8L"></a>
+            </div>
+            <div class="producto lata">
+                <a href="productos/producto_05.html"><img src="../imagenes/productos/lata.jpg" alt="Lata de aceite"></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <div id="social">
+                <h2>Social</h2>
+                <div id="redes">
+                    <a title="Twitter" href="https://www.twitter.com/"><img class="icono" src="../imagenes/iconos/twitter.png" alt="Twitter"></a>
+                    <a title="Facebook" href="https://www.facebook.com/"><img class="icono" src="../imagenes/iconos/facebook.png" alt="Facebook"></a>
+                    <a title="Instagram" href="https://www.instagram.com/"><img class="icono" src="../imagenes/iconos/instagram.png" alt="Instagram"></a>
+                    <a title="Email" href="https://www.google.com/gmail/"><img class="icono" src="../imagenes/iconos/rss.png" alt="Email"></a>
+                    <a title="Google +" href="https://plus.google.com/about?hl=es"><img class="icono" src="../imagenes/iconos/googleplus.png" alt="Google"></a>
+                    <a title="Linkedin" href="https://es.linkedin.com/"><img class="icono" src="../imagenes/iconos/linkedin.png" alt="Linkedin"></a>
+                </div>
+            </div>
+            <div id="traducir">
+                <h2>Traducir</h2>
+                <form class="form">
+                    <div class="switch-field">
+                        <input onclick="window.location='tienda.html'" type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+                        <label for="switch_left">Español</label>
+                        <input onclick="window.location='../ing/tienda.html'" type="radio" id="switch_right" name="switch_2" value="no" />
+                        <label for="switch_right">Ingles</label>
+                    </div>
+                </form>
+            </div>
+            <div id="nosotros">
+                <h2>Información de la tienda</h2>
+                <ul>
+                    <li id="dir">
+                        <a href="informacion.html"><img class="icono" src="../imagenes/iconos/localizacion.png" alt="Direccion"></a>
+                        <span>C/Granada, Nº1, 23001, Jaén</span>
+                    </li>
+                    <br>
+                    <li id="numero">
+                        <a href="tel:#"><img class="icono" src="../imagenes/iconos/telefono.png" alt="Telefono"></a>
+                        <span>Llámenos al 666 666 666</span>
+
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            function garrafa() {
+                for (let index = 0; index < document.getElementsByClassName('garrafa').length; index++) {
+                    document.getElementsByClassName('garrafa')[index].style.display = "initial";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('botella').length; index++) {
+                    document.getElementsByClassName('botella')[index].style.display = "none";
+                }
+
+                for (let index = 0; index < document.getElementsByClassName('lata').length; index++) {
+                    document.getElementsByClassName('lata')[index].style.display = "none";
+                }
+            }
+
+
+            function botella() {
+                for (let index = 0; index < document.getElementsByClassName('garrafa').length; index++) {
+                    document.getElementsByClassName('garrafa')[index].style.display = "none";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('botella').length; index++) {
+                    document.getElementsByClassName('botella')[index].style.display = "initial";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('lata').length; index++) {
+                    document.getElementsByClassName('lata')[index].style.display = "none";
+                }
+            }
+
+            function lata() {
+                for (let index = 0; index < document.getElementsByClassName('garrafa').length; index++) {
+                    document.getElementsByClassName('garrafa')[index].style.display = "none";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('botella').length; index++) {
+                    document.getElementsByClassName('botella')[index].style.display = "none";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('lata').length; index++) {
+                    document.getElementsByClassName('lata')[index].style.display = "initial";
+                }
+            }
+
+            function todo() {
+                for (let index = 0; index < document.getElementsByClassName('garrafa').length; index++) {
+                    document.getElementsByClassName('garrafa')[index].style.display = "initial";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('botella').length; index++) {
+                    document.getElementsByClassName('botella')[index].style.display = "initial";
+
+                }
+                for (let index = 0; index < document.getElementsByClassName('lata').length; index++) {
+                    document.getElementsByClassName('lata')[index].style.display = "initial";
+
+                }
+            }
+        </script>
+</body>
+
+</html>

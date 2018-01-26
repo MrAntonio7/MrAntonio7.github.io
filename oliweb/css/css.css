@@ -1,0 +1,397 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+*::selection {
+    background: #76d275;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background: #00701a;
+}
+
+#menu_cabecera {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#logo {
+    float: left;
+}
+
+#logo img {
+    width: 150px;
+    height: 60px;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    margin-top: 25px;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    border-left: 1px solid white;
+}
+
+nav input {
+    width: 80px;
+}
+
+nav a:hover {
+    color: #dce775;
+}
+
+#tienda a {
+    border-left: none;
+}
+
+#entrar {
+    padding-right: 20px;
+}
+
+#informacion a {
+    border-right: 1px solid white;
+}
+
+#buscar {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#submit_buscar {
+    width: 20px;
+    height: 20px;
+}
+
+#menu {
+    display: none;
+}
+
+#portada {
+    margin-bottom: 2%;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: #00701a;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    color: #fff;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+footer div {
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+
+#redes {
+    width: 100%;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#traducir {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.switch-field {
+    padding-left: 37%;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    float: left;
+}
+
+.switch-field label {
+    display: inline-block;
+    width: 90%;
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: none;
+    padding: 6px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked+label {
+    background-color: #A5DC86;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+#nosotros {
+    font-size: 75%;
+}
+
+#nosotros>ul {
+    list-style: none;
+}
+
+.button {
+    background-color: #00701a;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #43a047;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media screen and (min-width:49.06em) {
+    header {
+        height: 100px;
+        position: fixed;
+    }
+    #logo {
+        padding-left: 2%;
+    }
+    #menu_cabecera {
+        padding-top: 20px;
+    }
+    #tienda a {
+        padding-left: 0;
+    }
+    nav ul {
+        padding: 0;
+    }
+    #imagen_prueba {
+        float: left;
+        width: 500px;
+        height: 500px;
+    }
+    #redes {
+        height: 20%;
+    }
+    .switch-field label {
+        width: 60%;
+    }
+    .icono {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:49.06em) {
+    #logo {
+        margin-top: -50px;
+        padding-left: 0;
+        background: #00701a;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #logo img {
+        margin-left: 40%;
+    }
+    header {
+        height: 100%;
+    }
+    #menu_cabecera {
+        padding-top: 0;
+    }
+    nav ul {
+        font-size: 80%;
+        float: none;
+        padding-left: 0%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background: #00701a;
+    }
+    nav li {
+        display: inline;
+    }
+    nav a {
+        color: #FFF;
+    }
+    nav a:hover {
+        color: #FFF;
+    }
+    #redes {
+        height: 20%;
+    }
+    .switch-field {
+        width: 30%;
+        padding-left: 30%;
+    }
+    #nosotros ul {
+        font-size: 1vh;
+    }
+}
+
+@media screen and (max-width:34.38em) {
+    #logo {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin: 0;
+    }
+    #logo img {
+        margin-left: 5%;
+    }
+    header {
+        width: 100%;
+    }
+    #menu {
+        display: inline;
+        padding-left: 3%;
+    }
+    #menu img {
+        width: 30px;
+        height: 30px;
+    }
+    #menu_cabecera {
+        padding-bottom: 3%;
+    }
+    nav {
+        display: none;
+    }
+    nav ul {
+        margin-top: 0;
+        font-size: 100%;
+        float: none;
+        background: #00701a;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    nav li {
+        border: none;
+    }
+    nav a {
+        border: none;
+        display: block;
+        color: #FFF;
+        border-bottom: 1px dotted #FFF;
+        margin: 5px;
+        padding: 2px;
+    }
+    #tienda a {
+        margin-top: 0px;
+    }
+    #informacion a {
+        border-right: none;
+    }
+    #entrar {
+        padding-top: 5px;
+        border-top: 1px dotted #FFF;
+        border-bottom: none;
+    }
+    nav a:hover {
+        color: #FFF;
+    }
+    footer {
+        height: 300px;
+    }
+    footer div {
+        display: block;
+        width: 100%;
+        height: 33%;
+        padding-top: 2%;
+        margin-bottom: 2%;
+    }
+    #social {
+        margin: 0;
+    }
+    footer h2 {
+        margin: 0;
+    }
+    #traducir {
+        border: none;
+        border-top: 1px dotted #FFF;
+        border-bottom: 1px dotted #FFF;
+    }
+    .switch-field {
+        width: 40%;
+        padding-left: 35%;
+    }
+    .switch-field label {
+        width: 40px;
+        font-size: 75%;
+    }
+    #nosotros {
+        margin: 0;
+        background: #00701a;
+    }
+}
