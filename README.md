@@ -13,8 +13,10 @@ There are my developed projects during DAW
   - - This project is made with Bootstrap 4 & CSS. In order to make a professional project. it also contains animations.
   - - Bootstrap 4
   - - Animate.css
+  - - [Code of the proyect](https://github.com/MrAntonio7/Restaurant-Dovahkiin)
   - # [GamesApp - Angular](https://mrantonio7.github.io/gamesapp)
   - - This project is made in angular with the purpose of working with API's and working Angular 5 & Bootstrap 4
+  - - [Code of the proyect](https://github.com/MrAntonio7/GamesApp-Angular)
   - - This project was generated with Angular CLI version 1.6.5.
   - - To install the proyect, clone and:
   ```sh
