@@ -148,6 +148,14 @@ footer {
     font-size: 1.75rem;
 }
 
+.enlace-social {
+    color: #c19c62;
+}
+
+.enlace-social:hover {
+    color: #bfbfbf;
+}
+
 .parrafo-main,
 .separador-main {
     color: #fff;
