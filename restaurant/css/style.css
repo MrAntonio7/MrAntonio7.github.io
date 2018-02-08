@@ -408,6 +408,10 @@ footer {
     overflow: hidden;
 }
 
+.modal-backdrop {
+    position: relative;
+}
+
 
 /*               */
 
