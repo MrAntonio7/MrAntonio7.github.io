@@ -1,0 +1,539 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background: #1f1f1f;
+    margin: 0 0 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.top100 {
+    margin-top: 100px;
+}
+
+.bottom100 {
+    margin-bottom: 100px;
+}
+
+.subtitulo-carousel {
+    text-shadow: 5px 3px 3px #000000d7;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+.titulo-carousel {
+    margin: 0;
+    font-size: 150px;
+    text-shadow: 5px 3px 3px #000000d7;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+.separador {
+    font-size: 300%;
+}
+
+.navbar-toggler {
+    border: 0px;
+}
+
+.fa-bars {
+    color: #c19c62;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: none;
+    font-size: 110%;
+}
+
+.bg-black {
+    background: #000;
+}
+
+.navbar {
+    font-size: 18px;
+    color: #c19c62;
+    z-index: 100;
+    /* -webkit-box-shadow: 0 8px 6px -6px #1c1c1c;
+    -moz-box-shadow: 0 8px 6px -6px #1c1c1c;
+    box-shadow: 0 8px 6px -6px #1c1c1c; */
+    -webkit-box-shadow: 0px 8px 5px -2px #0c0c0c;
+    -moz-box-shadow: 0px 8px 5px -2px #0a0a0a;
+    box-shadow: 0px 8px 5px -2px #0c0c0c;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #c19c62;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #c19c62;
+    border-left: #c19c62 3px solid;
+    padding-left: 5px;
+}
+
+.btn-warning {
+    color: #000;
+    background-color: #c19c62;
+    background-image: none;
+    border-color: #c4a573;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-image: none;
+}
+
+.fa-arrow-circle-right,
+.fa-arrow-circle-left {
+    color: #ffffff;
+    font-size: 200%;
+}
+
+.breadcrumb {
+    padding-top: 3%;
+    background: transparent;
+}
+
+.breadcrumb a {
+    color: white;
+}
+
+.breadcrumb a:hover {
+    color: #bfbfbf;
+    text-decoration-line: none;
+}
+
+footer {
+    color: #c19c62;
+    z-index: 50;
+    position: absolute;
+    height: 400px;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    -webkit-box-shadow: 0px -8px 5px -2px #0c0c0c;
+    -moz-box-shadow: 0px -8px 5px -2px #0a0a0a;
+    box-shadow: 0px -8px 5px -2px #0c0c0c;
+}
+
+.list-footer,
+.list-item {
+    font-size: 80%;
+    list-style: none;
+    list-style: none;
+}
+
+.paddingtop {
+    padding-top: 4%;
+}
+
+.fa-angle-right {
+    color: #c19c62;
+}
+
+.footer-link {
+    color: #c19c62;
+}
+
+.footer-link:hover {
+    color: #bfbfbf;
+    text-decoration-line: none;
+}
+
+.social {
+    font-size: 1.75rem;
+}
+
+.parrafo-main,
+.separador-main {
+    color: #fff;
+}
+
+.titulo-main {
+    padding-top: 10%;
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: #c19c62;
+}
+
+.bg-image {
+    background: url('../assets/imgs/fondo-div.jpg');
+    background-size: cover;
+}
+
+.bottom-padding {
+    padding-bottom: 300px;
+}
+
+.padding-side {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.link-carousel {
+    color: black;
+}
+
+.link-carousel:hover {
+    color: #000000;
+    text-decoration-line: none;
+}
+
+
+/*             */
+
+
+/* MENU & CARTA*/
+
+
+/*             */
+
+#menu {
+    padding-top: 110px;
+}
+
+.titulo-menu {
+    font-size: 50px;
+    text-shadow: 5px 3px 3px #000000d7;
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: #c19c62;
+}
+
+.subtitulo-menu {
+    font-size: 20px;
+    color: white;
+}
+
+.separador-menu {
+    font-size: 300%;
+    color: white;
+}
+
+.titulo-seccion {
+    color: white;
+}
+
+.hr-menu,
+.hr-submenu {
+    border: 2px solid #c19c62;
+}
+
+.menu-item-index {
+    color: #c19c62;
+}
+
+.lista-menu {
+    list-style: none;
+}
+
+.descripcion-item {
+    font-size: 12px;
+    color: #bfbfbf;
+}
+
+.hr-item {
+    border: 0.5px solid #c19c62;
+}
+
+.drink {
+    margin-top: 24px;
+}
+
+.lista-menu>li {
+    padding-right: 5%;
+}
+
+.hr-menu {
+    padding-right: 5%;
+    width: 75%;
+}
+
+.hr-submenu {
+    margin: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 5%;
+}
+
+.w-80 {
+    width: 90%;
+}
+
+
+/*          */
+
+
+/*  Gallery */
+
+
+/*          */
+
+.img-gallery {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-gallery:hover {
+    box-shadow: 0px 0px 50px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 70;
+    padding-top: 125px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-color: #000000e6;
+    overflow: hidden;
+}
+
+.modal-content {
+    margin-top: 150px;
+    margin: auto;
+    display: block;
+    width: 60%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    margin-top: 100px;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*         */
+
+
+/* Reserva */
+
+
+/*         */
+
+.input {
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid #c19c62;
+}
+
+.input:focus {
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: none;
+}
+
+.text-grey {
+    color: #858c96;
+}
+
+#reserva {
+    overflow: hidden;
+}
+
+
+/*               */
+
+
+/*   Comments    */
+
+
+/*               */
+
+.white {
+    color: #fff;
+}
+
+.yellow {
+    color: #ffe100;
+}
+
+.white,
+.yellow {
+    font-size: 1.5em;
+}
+
+#item-comment {
+    padding-left: 5%;
+    margin-bottom: 5%;
+}
+
+.hora {
+    color: #c19c62;
+}
+
+#comentarios {
+    overflow: hidden;
+}
+
+.fa-paper-plane {
+    color: #000;
+}
+
+
+/*               */
+
+
+/*      About    */
+
+
+/*               */
+
+.seccion-about {
+    color: #c19c62;
+}
+
+#map {
+    height: 500px;
+}
+
+
+/*               */
+
+
+/* Media Queries */
+
+
+/*               */
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .titulo-carousel {
+        font-size: 100px;
+    }
+    footer {
+        height: 220px;
+    }
+    .bottom-main {
+        padding-bottom: 200px;
+    }
+    .titulo-main {
+        padding-top: 0;
+    }
+    .bottom-padding {
+        padding-bottom: 100px;
+    }
+    .titulo-menu {
+        font-size: 70px;
+    }
+    .subtitulo-menu {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-dark .navbar-nav .active>.nav-link,
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .navbar-dark .navbar-nav .show>.nav-link {
+        color: #c19c62;
+        border-left: none;
+        border-bottom: #c19c62 2px solid;
+        padding-left: 5px;
+    }
+    .subtitulo-carousel {
+        padding-bottom: 10%;
+    }
+    .parrafo-main {
+        padding-top: 10%;
+    }
+    .titulo-menu {
+        font-size: 100px;
+    }
+    .modal-content {
+        margin-top: 150px;
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .titulo-carousel {
+        font-size: 150px;
+    }
+    .subtitulo-carousel {
+        padding-bottom: 15%;
+        font-size: 50px;
+    }
+    .lista-menu>li {
+        padding-right: 0;
+    }
+}

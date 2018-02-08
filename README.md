@@ -2,13 +2,17 @@
 #### GitHub Pages
 
 There are my developed projects during DAW
-
+  - Restaurant Dovahkiin - Bootstrap 4
   - GamesApp - Angular
   - PelisDB - JQuery
   - Oliweb - CSS3
 
 # [Link of all the proyects: MrAntonio7.github.io](https://mrantonio7.github.io)
 # **New Features!**
+  - # [Restaurant Dovahkiin - Bootstrap](https://mrantonio7.github.io/restaurant)
+  - - This project is made with Bootstrap 4 & CSS. In order to make a professional project. it also contains animations.
+  - - Bootstrap 4
+  - - Animate.css
   - # [GamesApp - Angular](https://mrantonio7.github.io/gamesapp)
   - - This project is made in angular with the purpose of working with API's and working Angular 5 & Bootstrap 4
   - - This project was generated with Angular CLI version 1.6.5.
