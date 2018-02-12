@@ -412,6 +412,10 @@ footer {
     position: relative;
 }
 
+.gj-icon.event:before {
+    color: #c19c62;
+}
+
 
 /*               */
 
