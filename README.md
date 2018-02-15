@@ -7,6 +7,7 @@ There are my developed projects during DAW
   - GamesApp - Angular
   - PelisDB - JQuery
   - Oliweb - CSS3
+  - Chat - Node&Socket.io
 
 # [Link of all the proyects: MrAntonio7.github.io](https://mrantonio7.github.io)
 # **New Features!**
@@ -33,3 +34,7 @@ $ npm install
 
   - # [Oliweb - CSS3](https://mrantonio7.github.io/oliweb)
   - - This project is done only with HTML and CSS3. The purpose is to work CSS3
+
+  - # [Chat - NodeJS & Socket.io](https://js-node-chat.herokuapp.com/)
+  - - This project is done with NodeJS & Socket.io.
+  - - [Code of the proyect](https://github.com/MrAntonio7/ChatNodeJs)
