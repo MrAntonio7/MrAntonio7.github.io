@@ -2,6 +2,7 @@
 #### GitHub Pages
 
 There are my developed projects during DAW
+  - Rock, Paper, Scissors, Lizard, Spock  - Node.Js & Socket.io
   - Restaurant Dovahkiin - Bootstrap 4
   - GamesApp - Angular
   - PelisDB - JQuery
@@ -9,6 +10,9 @@ There are my developed projects during DAW
 
 # [Link of all the proyects: MrAntonio7.github.io](https://mrantonio7.github.io)
 # **New Features!**
+  - # [Rock, Paper, Scissors, Lizard, Spock  - Node.Js & Socket.io](https://rock-paper-scissors-lizard-spo.herokuapp.com/)
+  - - Game with Socket.io
+  - - [Code of the proyect](https://github.com/MrAntonio7/rock-paper-scissors-lizard-spock)
   - # [Restaurant Dovahkiin - Bootstrap](https://mrantonio7.github.io/restaurant)
   - - This project is made with Bootstrap 4 & CSS. In order to make a professional project. it also contains animations.
   - - Bootstrap 4
