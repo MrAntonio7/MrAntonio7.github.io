@@ -31,10 +31,12 @@ $ npm install
   - # [PelisDB - Jquery](https://mrantonio7.github.io/OMDB)
   - - This project is made JQuery with the purpose of working with AJAX, API's and infinite scroll
   - - OMDB API - https://www.omdbapi.com/
+  - - [Code of the proyect](https://github.com/MrAntonio7/Desarrollo-Web-Entorno-Cliente-2DAW/tree/master/Unit_7/OMDB%20API)
 
   - # [Form - JqueryUI](https://mrantonio7.github.io/jqueryui-form/)
   - - This project is made JQueryUI.
   - - Cars API - https://www.carqueryapi.com/
+  - - [Code of the proyect](https://github.com/MrAntonio7/JQuery-UI-Form)
 
   - # [Oliweb - CSS3](https://mrantonio7.github.io/oliweb)
   - - This project is done only with HTML and CSS3. The purpose is to work CSS3
