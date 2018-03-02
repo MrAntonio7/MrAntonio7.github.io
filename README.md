@@ -32,7 +32,7 @@ $ npm install
   - - This project is made JQuery with the purpose of working with AJAX, API's and infinite scroll
   - - OMDB API - https://www.omdbapi.com/
 
-    - # [PelisDB - Jquery](https://mrantonio7.github.io/jqueryui-form/)
+  - # [Form - JqueryUI](https://mrantonio7.github.io/jqueryui-form/)
   - - This project is made JQueryUI.
   - - Cars API - https://www.carqueryapi.com/
 
