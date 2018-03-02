@@ -6,6 +6,7 @@ There are my developed projects during DAW
   - Restaurant Dovahkiin - Bootstrap 4
   - GamesApp - Angular
   - PelisDB - JQuery
+  - Form - JQueryUI
   - Oliweb - CSS3
   - Chat - Node&Socket.io
 
@@ -31,6 +32,9 @@ $ npm install
   - - This project is made JQuery with the purpose of working with AJAX, API's and infinite scroll
   - - OMDB API - https://www.omdbapi.com/
 
+    - # [PelisDB - Jquery](https://mrantonio7.github.io/jqueryui-form/)
+  - - This project is made JQueryUI.
+  - - Cars API - https://www.carqueryapi.com/
 
   - # [Oliweb - CSS3](https://mrantonio7.github.io/oliweb)
   - - This project is done only with HTML and CSS3. The purpose is to work CSS3
