@@ -38,7 +38,8 @@
                 isRTL: false,
                 showMonthAfterYear: false,
                 yearSuffix: '',
-                changeYear: true
+                changeYear: true,
+                numberOfMonths: 2
 
             };
 
@@ -57,7 +58,7 @@
             var cars = []
 
             $.ajax({
-                url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=2000&sold_in_us=1',
+                url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes',
                 type: 'GET',
                 crossDomain: true,
                 dataType: 'jsonp',
@@ -126,6 +127,7 @@
                 $("#dialog2").dialog("open");
             });
             $(".ui-dialog-titlebar-close").hide()
+
             $('#nombre, #apellido, #dni, #tel, #email, #postal, #from, #to, #km, #search').tooltip({
                 show: "slideDown",
                 open: function(event, ui) {
