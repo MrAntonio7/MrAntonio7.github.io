@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb' crossorigin='anonymous'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/animate.css'>
+    <link rel='shortcut icon' href='assets/favicon.ico' type='image/x-icon'>";
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/blitzer/jquery-ui.css">
+    <link rel="stylesheet" href="/my-theme/jquery-ui.css">
+    <link rel="stylesheet" href="/my-theme2/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '< Ant',
+                nextText: 'Sig >',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: '',
+                changeYear: true
+
+            };
+
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+
+            $("#from").datepicker({
+                showAnim: 'shake'
+            });
+
+            $("#to").datepicker({
+                showAnim: 'explode'
+            });
+
+            $("#km").selectmenu();
+
+            var cars = []
+
+            $.ajax({
+                url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=2000&sold_in_us=1',
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function(resolve) {
+                    resolve.Makes.map(function(car) {
+                        cars.push(car.make_id);
+                    })
+                    console.log(cars);
+                },
+                error: function() {
+                    alert('Failed!');
+                }
+            });
+
+            $("input.autocomplete").autocomplete({
+                minLength: 1,
+                source: function(request, response) {
+                    var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(request.term), "i");
+                    response($.grep(cars, function(item) {
+                        return matcher.test(item);
+                    }));
+                },
+                select: function(event, ui) {
+                    $("input.autocomplete").val(ui.item);
+                }
+            });
+
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "drop",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 1000
+                },
+                buttons: {
+                    'Aceptar': function() {
+                        $(this).dialog("close");
+                    }
+                }
+            }).parents('.ui-dialog:eq(0)').wrap("<div class='my-theme2'></div>");
+
+            $("#dialog2").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "drop",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 1000
+                },
+                buttons: {
+                    'Aceptar': function() {
+                        $(this).dialog("close");
+                    }
+                }
+            }).parents('.ui-dialog:eq(0)').wrap("<div class='my-theme'></div>");
+
+            $("#opener").on("click", function() {
+                $("#dialog").dialog("open");
+            });
+            $("#borrar").on("click", function() {
+                $("#dialog2").dialog("open");
+            });
+            $(".ui-dialog-titlebar-close").hide()
+            $('#nombre, #apellido, #dni, #tel, #email, #postal, #from, #to, #km, #search').tooltip({
+                show: "slideDown",
+                open: function(event, ui) {
+                    ui.tooltip.hover(
+                        function() {
+                            $(this).fadeTo("slow", 0.5);
+                        });
+                }
+            });
+
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
+        <a href="index.html"><img src="assets/logo.png" width="200" height="100" class="d-inline-block align-top mr-4" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="margintopbottom">
+
+        <div class="container mt-5">
+
+            <div class="row">
+                <div class="col-12 text-center mt-5">
+                    <h1 class="text-white about titulo-about animated fadeInDown">Alquila tu coche</h1>
+                    <span class="text-white  about  separador-about animated fadeInUp">***</span>
+                </div>
+            </div>
+
+
+            <section class="container" id="reserva">
+                <form action="" class="form-group">
+                    <div class="row">
+                        <div class="col-12 col-md-4 input-group">
+                            <input id="nombre" title='Escribe tu nombre.' type="text" name="nombre" class="form-control input mb-5 animated bounceInLeft" placeholder="Nombre">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <input id="apellido" title='Escribe tus apellidos.' type="text" name="apellido" class="form-control input mb-5 animated bounceInRight" placeholder="Apellidos">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <input id="dni" title='Escribe tu DNI.' type="text" name="dni" class="form-control  input mb-5 animated bounceInRight" placeholder="DNI">
+                        </div>
+                    </div>
+                    <input id="email" title='Escribe tu email.' type="text" name="email" class="form-control  input mb-5 animated bounceInLeft" placeholder="Email">
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <input id="tel" title='Escribe tu teléfono.' type="text" name="telefono" class="form-control input mb-5  animated bounceInRight" placeholder="Teléfono">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input id="postal" title='Escribe tu código postal.' type="text" name="postal" class="form-control input mb-5  animated bounceInLeft" placeholder="Codigo Postal">
+                        </div>
+                    </div>
+
+
+                    <div class="row my-theme">
+                        <div class="col-4 col-md-2 my-theme">
+                            <label class="text-grey mb-0 mt-2 animated bounceInRight" for="from">Fecha de inicio:</label></div>
+                        <div class="col-8 col-md-4">
+                            <input type="text" title='Selecciona la fecha inicial del alquiler.' id="from" name="from" class="form-control  input mb-5  animated bounceInLeft" placeholder="Datapicker"></div>
+                        <div class="col-4 col-md-2">
+                            <label class="text-grey mb-0 mt-2 animated bounceInRight" for="to">Fecha de fin:</label></div>
+                        <div class="col-8 col-md-4">
+                            <input type="text" title='Selecciona la fecha final del alquiler.' id="to" name="to" class="form-control  input mb-5  animated bounceInLeft" placeholder="Datapicker"></div>
+                    </div>
+
+                    <div class="row animated bounceInRight my-theme">
+                        <div class="col-2 col-md-2 text-left">
+                            <p class="text-grey mb-0 mt-2">Distancia:</p>
+                        </div>
+
+                        <div class="col-10 col-md-4  input mb-5 animated bounceInRight">
+                            <select class="form-control input text-grey" id='km'>
+                                    <option>100 km</option>
+                                    <option>250 km</option>
+                                    <option>500 km</option>
+                                    <option>750 km</option>
+                                    <option>1000 km</option>
+                                    <option>1250 km</option>
+                                    <option>1500 km</option>
+                                    <option>1750 km</option>
+                                    <option>2000 km</option>
+                                </select>
+                        </div>
+
+                        <div class="col-2 col-md-2 text-left">
+                            <p class="text-grey mb-0 mt-2">Marca:</p>
+                        </div>
+
+                        <div class="col-10 col-md-4">
+                            <div class="input-group my-theme ">
+                                <input title='Escribe la marca del vehículo.' type="text" id="search" class="form-control autocomplete input mb-5" placeholder="Audi, BMW..." />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="dialog" title="Reserva confirmada">
+                        <p><span class="fa fa-check" style="float:left; margin:12px 12px 20px 0;"></span>Pasate por aquí y recoge tu vehículo</p>
+                    </div>
+
+                    <div id="dialog2" title="Formulario limpio">
+                        <p><span class="fa fa-check" style="float:left; margin:12px 12px 20px 0;"></span>El formulario se ha limpiado.</p>
+                    </div>
+
+                    <button type="reset" class="btn btn-outline-danger my-5 float-left" id="borrar"> <strong> Limpiar </strong></button>
+
+                    <button type="button" class="btn btn-outline-success my-5 float-right" id="opener"> <strong> Reserva </strong></button>
+
+                </form>
+
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <div class='continer-fluid'>
+            <div class='row w-100 pt-3'>
+                <div class='col-12 col-md-6 text-center m-0 paddingtop social my-auto'>
+                    <a class='enlace-social' href=''><i class='fa fa-twitter-square'></i></a>
+                    <a class='enlace-social' href=''><i class='fa fa-facebook-square'></i></a>
+                    <a class='enlace-social' href=''><i class='fa fa-instagram'></i></a>
+                    <a class='enlace-social' href=''><i class='fa fa-envelope-square'></i></a>
+                    <a class='enlace-social' href=''><i class='fa fa-google-plus-square'></i></a>
+                    <a class='enlace-social' href=''><i class='fa fa-linkedin-square'></i></a>
+                </div>
+                <div class='col-12 col-md-6 text-center m-0 paddingtop my-auto'>
+                    <p>Antonio Jesús Álvarez Malagón</p>
+                    <p>2018 Copyright &copy;</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js ' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN ' crossorigin='anonymous '></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js ' integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh ' crossorigin='anonymous '></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js ' integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ ' crossorigin='anonymous '></script>
+</body>
+
+</html>
